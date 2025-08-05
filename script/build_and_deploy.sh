@@ -82,10 +82,10 @@ echo "Successfully built and pushed ${ECR_REPOSITORY}/${IMAGE_NAME}:${TAG}"
 
 if [ "$ENV" == "staging" ]; then
     echo "Deploying to staging..."
-    # echo "https://dashboard.porter.run/api/webhooks/deploy/PORTER_DEPLOY_ID?commit=${TAG}"
-    # echo "https://dashboard.porter.run/api/webhooks/deploy/PORTER_DEPLOY_ID?commit=${TAG}"
-    # curl -X POST "https://dashboard.porter.run/api/webhooks/deploy/PORTER_DEPLOY_ID?commit=${TAG}"
-    # curl -X POST "https://dashboard.porter.run/api/webhooks/deploy/PORTER_DEPLOY_ID?commit=${TAG}"
+    echo "https://dashboard.porter.run/api/webhooks/deploy/fa55a608ec4eab27cfa04935a8601591?commit=${TAG}"
+    # echo "https://dashboard.porter.run/api/webhooks/deploy/fa55a608ec4eab27cfa04935a8601591?commit=${TAG}"
+    curl -X POST "https://dashboard.porter.run/api/webhooks/deploy/fa55a608ec4eab27cfa04935a8601591?commit=${TAG}"
+    # curl -X POST "https://dashboard.porter.run/api/webhooks/deploy/fa55a608ec4eab27cfa04935a8601591?commit=${TAG}"
 fi
 
 if [ "$ENV" == "production" ]; then
