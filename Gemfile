@@ -54,6 +54,8 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  # Pretty print Ruby objects in the console [https://github.com/awesome-print/awesome_print]
+  gem "awesome_print"
 end
 
 group :development, :test do
