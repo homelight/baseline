@@ -7,57 +7,57 @@ development:
   primary: &primary_development
     <<: *default
     gssencmode: "disable"
-    database: app_development
+    database: homelight_product_development
     username: <%= ENV.fetch('DATABASE_USERNAME', 'postgres') %>
     password: <%= ENV.fetch('DATABASE_PASSWORD', 'postgres') %>
     host: <%= ENV.fetch('DATABASE_HOST', '127.0.0.1') %>
   queue:
     <<: *primary_development
-    database: app_development_queue
+    database: homelight_product_development_queue
     migrations_paths: db/queue_migrate
 
 test:
   primary: &primary_test
     <<: *default
-    database: app_test
+    database: homelight_product_test
     url: <%= ENV["DATABASE_URL"] %>
   queue:
     <<: *primary_test
-    database: app_test_queue
+    database: homelight_product_test_queue
     migrations_paths: db/queue_migrate
 
 staging:
   primary: &primary_staging
     <<: *default
-    database: app_staging
+    database: homelight_product_staging
     url: <%= ENV["DATABASE_URL"] %>
   cache:
     <<: *primary_staging
-    database: app_staging_cache
+    database: homelight_product_staging_cache
     migrations_paths: db/cache_migrate
   queue:
     <<: *primary_staging
-    database: app_staging_queue
+    database: homelight_product_staging_queue
     migrations_paths: db/queue_migrate
   cable:
     <<: *primary_staging
-    database: app_staging_cable
+    database: homelight_product_staging_cable
     migrations_paths: db/cable_migrate
 
 production:
   primary: &primary_production
     <<: *default
-    database: app_production
+    database: homelight_product_production
     url: <%= ENV["DATABASE_URL"] %>
   cache:
     <<: *primary_production
-    database: app_production_cache
+    database: homelight_product_production_cache
     migrations_paths: db/cache_migrate
   queue:
     <<: *primary_production
-    database: app_production_queue
+    database: homelight_product_production_queue
     migrations_paths: db/queue_migrate
   cable:
     <<: *primary_production
-    database: app_production_cable
+    database: homelight_product_production_cable
     migrations_paths: db/cable_migrate
