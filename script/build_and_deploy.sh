@@ -54,7 +54,7 @@ echo "Building Docker image for $ENV environment"
 
 TODAY=$(date +%s)
 COMMIT_HASH=$(git rev-parse --short HEAD)
-IMAGE_NAME="homelight-product"-${ENV}
+IMAGE_NAME="baseline"-${ENV}
 TAG="${COMMIT_HASH}${TODAY}"
 ECR_REPOSITORY="020742127634.dkr.ecr.us-east-1.amazonaws.com"
 
