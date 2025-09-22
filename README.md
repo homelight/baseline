@@ -22,3 +22,5 @@ It is set up so that you can use an AI tool like CODEX or CURSOR AGENT to write 
 14. Make your first PR (and make it easy!) so that GitHub will kick off a build and deploy of the app.
 15. Get Mike Abner to help you set up an app in Porter and database at CrunchyBridge
 16. Prompt away!
+
+
